@@ -1,7 +1,4 @@
-import weather.CurrentConditionsDisplay;
-import weather.ForecastDisplay;
-import weather.StatisticsDisplay;
-import weather.WeatherData;
+import weather.*;
 
 import java.util.Currency;
 
@@ -12,11 +9,14 @@ public class Main {
         WeatherData weatherData = new WeatherData();
 
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
-       // StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
-       // ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+        HeatIndexDisplay heatIndexDisplay = new HeatIndexDisplay(weatherData);
+        CelsiyDisplay  celsiyDisplay = new CelsiyDisplay(weatherData);
+        // ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+
 
         weatherData.setMeasurements(80,65,30.4f);
         weatherData.setMeasurements(82,70,28.2f);
         weatherData.setMeasurements(78,90,29.3f);
+        weatherData.setMeasurements(100, 90,29.9f);
     }
 }
